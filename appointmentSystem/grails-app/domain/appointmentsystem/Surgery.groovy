@@ -7,8 +7,14 @@ class Surgery {
    String telephone
    int numberOfPatients
    String description
-   Date openingtime
+   String openingtime
 
     static constraints = {
+       name blank:false, nullable: false
+       address blank:false, nullable: false
+       telephone blank:false, nullable:false
+       numberOfPatients max:50, blank:false, nullable:false
+       description maxSize:500, blank:false, nullable:false, 
+       openingtime blank:false, nullable:false 
     }
 }
