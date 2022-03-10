@@ -1,6 +1,7 @@
 package com.sali
 
 class Surgery {
+    // declare variables
    String name
    String address
    String postcode
@@ -10,6 +11,7 @@ class Surgery {
    String openingtime
 
     static constraints = {
+        // constraints
         name blank:false
        address blank:false
        telephone blank:false
@@ -17,4 +19,6 @@ class Surgery {
        description blank:false, widget: 'textarea'
        openingtime blank:false
     }
+    // declare relationships
+    static hasMany = [doctor:Doctor, receptionist:Receptionist, appointment:Appointment, patient:Patient, nurse:Nurse]
 }

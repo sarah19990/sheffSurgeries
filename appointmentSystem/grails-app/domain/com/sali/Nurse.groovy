@@ -1,6 +1,7 @@
 package com.sali
 
 class Nurse {
+    //declare variables
    String nurseName
    String qualifications
    String nurseEmail
@@ -8,6 +9,7 @@ class Nurse {
    String nursePhone
 
     static constraints = {
+        //constraints
         nurseName blank:false
         qualifications blank:false
         nurseEmail blank:false, email: true
@@ -15,4 +17,7 @@ class Nurse {
         nursePhone blank:false
 
     }
+    // declare relationships
+    static hasMany = [doctor:Doctor]
+    static belongsTo = [surgery:Surgery]
 }

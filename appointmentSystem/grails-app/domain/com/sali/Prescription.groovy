@@ -1,6 +1,7 @@
 package com.sali
 
 class Prescription {
+   // declare variables
    String pharmacyName
    String prescripNumber
    String medicine
@@ -9,6 +10,7 @@ class Prescription {
    Boolean patientPaying
 
     static constraints = {
+        //delcare constraints
        pharmacyName blank:false
        prescripNumber blank:false
        medicine blank:false
@@ -16,4 +18,6 @@ class Prescription {
        dateIssued blank:false, nullable:false
        patientPaying blank:false, nullable:false
     }
+    // declare relationships
+    static belongsTo = [doctor:Doctor, surgery:Surgery]
 }

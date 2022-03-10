@@ -1,6 +1,7 @@
 package com.sali
 
 class Patient {
+   //declare variables
    String patientName
    String patientAddress
    String patientResidence
@@ -10,6 +11,7 @@ class Patient {
    String patientPhone
 
     static constraints = {
+        //delcare constraints
        patientName blank:false
        patientAddress blank:false
        patientResidence blank:false
@@ -18,5 +20,6 @@ class Patient {
        dateRegistered blank:false, nullable:false
        patientPhone blank:false 
     }
-
+     // declare relationships
+   static hasMany = [doctor:Doctor, surgery:Surgery, prescription:Prescription]
 }
