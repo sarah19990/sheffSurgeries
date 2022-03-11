@@ -12,9 +12,9 @@ class Nurse {
         //constraints
         nurseName blank:false
         qualifications blank:false
-        nurseEmail blank:false, email: true
+        nurseEmail blank:false, email: true, unique:true
         nurseOffice blank:false
-        nursePhone blank:false
+        nursePhone blank:false, size:0..15
 
     }
     // declare relationships

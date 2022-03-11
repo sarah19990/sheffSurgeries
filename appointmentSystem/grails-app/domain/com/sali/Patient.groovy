@@ -16,9 +16,9 @@ class Patient {
        patientAddress blank:false
        patientResidence blank:false
        patientDob blank:false, date: true, nullable: false
-       patientID blank: false
+       patientID blank: false, unique:true
        dateRegistered blank:false, nullable:false
-       patientPhone blank:false 
+       patientPhone blank:false, size:0..15
     }
      // declare relationships
    static hasMany = [doctor:Doctor, surgery:Surgery, prescription:Prescription]
