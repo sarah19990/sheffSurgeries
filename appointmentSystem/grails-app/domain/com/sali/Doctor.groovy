@@ -16,10 +16,10 @@ class Doctor {
         fullName blank:false
         qualifications  blank:false
         position blank:false
-        doctorEmail blank:false, email: true
-        password blank:false
+        doctorEmail blank:false, email: true, unique:true
+        password blank:false, size:0..15
         doctorOffice blank:false
-        doctorPhone blank:false
+        doctorPhone blank:false, size:0..15
         bio blank:false, widget: 'textarea'
     }
     // declare relationships
