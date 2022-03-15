@@ -19,5 +19,6 @@ class Prescription {
        patientPaying blank:false, nullable:false
     }
     // declare relationships
-    static belongsTo = [doctor:Doctor, surgery:Surgery]
+    static belongsTo = [doctor:Doctor]
+    static hasMany = [patients:Patient]
 }
