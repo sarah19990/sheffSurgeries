@@ -11,7 +11,7 @@ class Surgery {
    String openingtime
 
     static constraints = {
-        // constraints
+        // declare constraints
         name blank:false
        address blank:false
        postcode blank:false, size:5..10
@@ -21,5 +21,5 @@ class Surgery {
        openingtime blank:false
     }
     // declare relationships
-    static hasMany = [doctor:Doctor, receptionist:Receptionist, appointment:Appointment, patient:Patient, nurse:Nurse]
+     static hasMany = [doctors:Doctor, receptionists:Receptionist, nurses:Nurse, patients:Patient, appointments:Appointment]
 }

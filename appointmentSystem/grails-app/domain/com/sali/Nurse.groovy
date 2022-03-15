@@ -9,7 +9,7 @@ class Nurse {
    String nursePhone
 
     static constraints = {
-        //constraints
+        //declare constraints
         nurseName blank:false
         qualifications blank:false
         nurseEmail blank:false, email: true, unique:true
@@ -18,6 +18,6 @@ class Nurse {
 
     }
     // declare relationships
-    static hasMany = [doctor:Doctor]
-    static belongsTo = [surgery:Surgery]
+    
+    static belongsTo = [surgery:Surgery, doctor:Doctor]
 }

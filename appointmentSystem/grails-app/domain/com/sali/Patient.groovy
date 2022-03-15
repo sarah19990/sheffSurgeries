@@ -21,5 +21,6 @@ class Patient {
        patientPhone blank:false, size:0..15
     }
      // declare relationships
-   static hasMany = [doctor:Doctor, surgery:Surgery, prescription:Prescription]
+   static belongsTo = [surgery:Surgery]
+   static hasMany = [prescriptions:Prescription, doctors:Doctor, appointments:Appointment]
 }

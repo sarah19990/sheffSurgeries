@@ -13,7 +13,7 @@ class Receptionist {
        recepName blank:false
        recepEmail blank:false, email: true, unique:true
        recepUsername blank:false, unique: true
-       recepPassword blank:false, size::7..16
+       recepPassword blank:false, size:7..16
        recepPhone blank:false, size:0..15
     }
     // declare relationships
