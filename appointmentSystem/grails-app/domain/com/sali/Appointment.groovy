@@ -7,6 +7,11 @@ class Appointment {
    int appDuration
    String roomNumber
 
+// declare instances
+   String toString(){
+        return appTime
+    }
+
     static constraints = {
        //delcare constraints
        appDate blank:false

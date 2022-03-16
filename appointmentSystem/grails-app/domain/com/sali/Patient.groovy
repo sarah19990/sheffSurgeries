@@ -10,6 +10,11 @@ class Patient {
    Date dateRegistered
    String patientPhone
 
+   // declare instances
+   String toString(){
+        return patientName
+    }
+
     static constraints = {
         //delcare constraints
        patientName blank:false

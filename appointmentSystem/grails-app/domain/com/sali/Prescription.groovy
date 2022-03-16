@@ -9,6 +9,11 @@ class Prescription {
    Date dateIssued
    Boolean patientPaying
 
+
+// declare instances
+   String toString(){
+        return medicine
+    }
     static constraints = {
         //delcare constraints
        pharmacyName blank:false

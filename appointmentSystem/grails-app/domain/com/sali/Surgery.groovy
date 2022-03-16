@@ -10,6 +10,11 @@ class Surgery {
    String description
    String openingtime
 
+   // declare instances
+   String toString(){
+        return name
+    }
+
     static constraints = {
         // declare constraints
         name blank:false
