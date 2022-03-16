@@ -23,6 +23,6 @@ class Doctor {
         bio blank:false, widget: 'textarea'
     }
     // declare relationships
-    static hasMany = [patients:Patient, prescriptions:Prescription, appointments:Appointment, nurses:Nurse]
-    static belongsTo = [surgery:Surgery]
+    static hasMany = [prescriptions:Prescription, appointments:Appointment, nurses:Nurse]
+    static belongsTo = [surgery:Surgery, patient:Patient]
 }

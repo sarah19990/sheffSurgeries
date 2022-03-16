@@ -1,0 +1,26 @@
+relationships 
+
+These are the associations that i got from the class diagram and that i am going to implement.
+
+class Appointment
+ static belongsTo = [surgery:Surgery, doctor:Doctor,  patient:Patient]
+
+ class Receptionist
+static belongsTo = [surgery:Surgery]
+
+class Nurse
+static belongsTo = [surgery:Surgery, doctor:Doctor]
+
+class Doctor
+static hasMany = [prescriptions:Prescription, appointments:Appointment, nurses:Nurse]
+static belongsTo = [surgery:Surgery, patient:Patient]
+
+class Prescription
+static belongsTo = [doctor:Doctor, patient:Patient]
+
+class Surgery 
+static hasMany = [doctors:Doctor, receptionists:Receptionist, nurses:Nurse, patients:Patient, appointments:Appointment]
+
+class Patient
+static belongsTo = [surgery:Surgery]
+static hasMany = [prescriptions:Prescription, doctors:Doctor, appointments:Appointment]
