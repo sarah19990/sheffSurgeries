@@ -11,6 +11,11 @@ class Doctor {
    String doctorPhone
    String bio
 
+   // declare instances
+   String toString(){
+        return fullName
+    }
+
     static constraints = {
         // declare constraints
         fullName blank:false

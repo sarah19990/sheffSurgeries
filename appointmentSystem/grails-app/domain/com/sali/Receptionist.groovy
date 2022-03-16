@@ -8,6 +8,10 @@ class Receptionist {
    String recepPassword
    String recepPhone
 
+// declare instances
+   String toString(){
+        return recepName
+    }
     static constraints = {
         //declare constraints
        recepName blank:false

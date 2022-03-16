@@ -8,6 +8,11 @@ class Nurse {
    String nurseOffice
    String nursePhone
 
+  // declare instances
+   String toString(){
+        return nurseName
+    }
+
     static constraints = {
         //declare constraints
         nurseName blank:false
