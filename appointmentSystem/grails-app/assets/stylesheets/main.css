@@ -417,7 +417,7 @@ th {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #eaeaea));
     filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#ffffff', EndColorStr = '#eaeaea');
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eaeaea')";
-    color: #666666;
+    color: #110f0f;
     font-weight: bold;
     line-height: 1.7em;
     padding: 0.2em 0.6em;
@@ -433,11 +433,11 @@ th a {
 }
 
 th a:link, th a:visited {
-    color: #666666;
+    color: #110d0d;
 }
 
 th a:hover, th a:focus {
-    color: #333333;
+    color: #0c0909;
 }
 
 th.sortable a {
