@@ -16,21 +16,13 @@
 
 <body>
 
+<div class="row">
 
-    <div class="container-fluid">
-        <asset:image src="medicalcentre.png"/>
-        <asset:image src="doctor.jpg"/>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <asset:image src="doctor.jpg"/>
+    <asset:image src="receptionist.jpg"/>
+    <asset:image src="nurse.jpg"/>
 
-        <div class="collapse navbar-collapse" aria-expanded="false" style="height: 0.8px;" id="navbarContent">
-            <ul class="nav navbar-nav ml-auto">
-                <g:pageProperty name="page.nav"/>
-            </ul>
-        </div>
-    </div>
-</nav>
+</div>    
 
 <g:layoutBody/>
 
