@@ -22,6 +22,8 @@
     <asset:image src="receptionist.jpg"/>
     <asset:image src="nurse.jpg"/>
 
+<g:loginToggle />
+
 </div>    
 
 <g:layoutBody/>
