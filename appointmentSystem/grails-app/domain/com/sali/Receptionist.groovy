@@ -4,8 +4,8 @@ class Receptionist {
    //declare variables
    String recepName
    String recepEmail
-   String recepUsername
-   String recepPassword
+   String username
+   String password
    String recepPhone
 
 // declare instances
@@ -16,8 +16,8 @@ class Receptionist {
         //declare constraints
        recepName blank:false
        recepEmail blank:false, email: true, unique:true
-       recepUsername blank:false, unique: true
-       recepPassword blank:false, size:7..16
+       username blank:false, unique: true
+       password blank:false, size:7..16
        recepPhone blank:false, size:0..15
     }
     // declare relationships
