@@ -3,6 +3,7 @@
 <head>
     <meta name="layout" content="main"/>
     <asset:stylesheet src="home.css"/>
+    
     <title>links for the controllers</title>
 </head>
 <body>
@@ -65,6 +66,20 @@
      <button type="button" class="btn btn-success">
 
            <g:link controller="Receptionist" action="create">Register Receptionist</g:link>
+
+     </button>
+
+
+</div>
+
+<div class="fifth">
+               <h3>Advanced Search</h3>
+
+
+
+     <button type="button" class="btn btn-success">
+
+           <g:link controller="patient" action="advSearch">Search button</g:link>
 
      </button>
 

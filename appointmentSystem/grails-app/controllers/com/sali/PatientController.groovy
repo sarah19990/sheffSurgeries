@@ -9,6 +9,39 @@ class PatientController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def advSearch(){
+
+    render view:'advSearch'
+
+}
+
+    def advResults() {
+
+        def patientProps= Patient.metaClass.properties*.name
+
+        def patients = Patient.withCriteria {
+            
+            "${params.queryType}" {
+
+                params.each { field, value ->
+                
+                if (patientProps.grep(field) && value) {
+                    
+                    ilike(field, value)
+
+                    
+
+                }
+
+            }
+
+       }
+
+   }
+
+   return [ patients : patients ]
+ }
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond patientService.list(params), model:[patientCount: patientService.count()]
