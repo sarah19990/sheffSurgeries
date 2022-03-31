@@ -54,6 +54,20 @@
 
 </div>
 
+<div class="fourth">
+               <h3>Advanced Search</h3>
+
+
+
+     <button type="button" class="btn btn-success">
+
+           <g:link controller="prescription" action="advSearch">Search button</g:link>
+
+     </button>
+
+
+</div>
+
 
 
 </div>

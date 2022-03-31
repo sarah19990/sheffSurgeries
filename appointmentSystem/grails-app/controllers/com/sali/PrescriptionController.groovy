@@ -9,6 +9,39 @@ class PrescriptionController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def advSearch(){
+
+    render view:'advSearch'
+
+}
+
+    def advResults() {
+
+        def prescriptionProps= Prescription.metaClass.properties*.name
+
+        def prescriptions = Prescription.withCriteria {
+            
+            "${params.queryType}" {
+
+                params.each { field, value ->
+                
+                if (prescriptionProps.grep(field) && value) {
+                    
+                    ilike(field, value)
+
+                    
+
+                }
+
+            }
+
+       }
+
+   }
+
+   return [ prescriptions : prescriptions ]
+ }
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond prescriptionService.list(params), model:[prescriptionCount: prescriptionService.count()]
